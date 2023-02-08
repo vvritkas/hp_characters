@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+h1 Add a new character 
+  form(action='/create' method='post')
+    label(for="fname") Name:
+    input(type="text" id="name" name="name")
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
