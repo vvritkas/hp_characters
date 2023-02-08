@@ -1,8 +1,8 @@
 CREATE TABLE hp_characters (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name TEXT,
-  house TEXT,
-  actor TEXT,
+  house VARCHAR(255),
+  actor VARCHAR(255)
 );
 
 INSERT INTO hp_characters (name, house, actor)
