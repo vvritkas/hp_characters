@@ -1,0 +1,19 @@
+extends layout 
+
+block content
+  table 
+    tr 
+      th Name 
+      th House 
+      th Actor 
+      th
+    each char in characters 
+      tr 
+        td
+          a(href=`/characters/${char.id}`) #{char.name}  
+        td #{char.house} 
+        td #{char.actor}
+        td 
+          form(action="/character-delete", method="post")
+            button(type="submit", name="id", value=`${char.id}`) Delete
+  a(href=`/characters-create`) Create new character
